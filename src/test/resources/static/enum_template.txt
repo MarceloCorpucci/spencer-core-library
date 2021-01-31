@@ -1,0 +1,13 @@
+public enum <ENUM_NAME> {
+	NAME(VALUE)
+	
+	private String <ATTRIBUTE>;
+
+	public String get<ATTRIBUTE>() {
+		return this.<ATTRIBUTE>;
+	}
+	
+	private <ENUM_NAME>(String <ATTRIBUTE>) {
+		this.<ATTRIBUTE> = <ATTRIBUTE>;
+	}
+}

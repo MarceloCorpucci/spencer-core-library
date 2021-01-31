@@ -1,4 +1,4 @@
-package spencer.core.creator;
+package spencer.domain.core.creator;
 
 import java.util.ArrayList;
 import java.util.List;

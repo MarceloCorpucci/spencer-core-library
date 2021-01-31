@@ -6,7 +6,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import org.junit.Test;
 
 import spencer.adapter.io.SpencerConsoleWriter;
-import spencer.core.creator.EnumEntityBuilder;
+import spencer.domain.core.creator.EnumEntityBuilder;
 import spencer.port.io.SpencerTemplateWriter;
 
 

@@ -6,7 +6,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
-import spencer.core.creator.EnumEntityBuilder;
+import spencer.domain.core.creator.EnumEntityBuilder;
 import spencer.port.io.SpencerTemplateWriter;
 
 public class SpencerFileWriter extends SpencerTemplateWriter {

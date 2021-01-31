@@ -8,7 +8,8 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class ArchitectureGlue {
-	private String corePackage;
+	private String domainCorePackage;
+	private String domainStructuralPackage;
 	private String portPackage;
 	private String adapterPackage;
 	
@@ -19,7 +20,8 @@ public class ArchitectureGlue {
 		@When("I see the main design from the highest level")
 		public void i_see_the_main_design_from_the_highest_level() {
 			try {
-				corePackage = Class.forName("spencer.core.Core").getPackage().getName();
+				domainCorePackage = Class.forName("spencer.domain.core.Core").getPackage().getName();
+				domainStructuralPackage = Class.forName("spencer.domain.structural.Structural").getPackage().getName();
 				portPackage = Class.forName("spencer.port.Port").getPackage().getName();
 				adapterPackage = Class.forName("spencer.adapter.Adapter").getPackage().getName();
 			} catch (ClassNotFoundException e) {
@@ -31,9 +33,14 @@ public class ArchitectureGlue {
 		public void i_should_find_the_following_module_distribution() {
 		}
 		
-		@Then("The core layer implemented in {string}")
-		public void the_core_layer_implemented_in(String string) {
-			assertThat(corePackage, equalTo(string));
+		@Then("The domain core layer implemented in {string}")
+		public void the_domain_core_layer_implemented_in(String string) {
+			assertThat(domainCorePackage, equalTo(string));
+		}
+		
+		@Then("The domain structural layer implemented in {string}")
+		public void the_domain_structural_layer_implemented_in(String string) {
+			assertThat(domainStructuralPackage, equalTo(string));
 		}
 		
 		@Then("The port layer implemented in {string}")

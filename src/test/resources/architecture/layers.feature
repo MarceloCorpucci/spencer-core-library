@@ -14,6 +14,7 @@ Feature: Spencer layers
 		Given Spencer implements the Hexagonal Architecture
 		When I see the main design from the highest level
 		Then I should find the following module distribution:
-			* The core layer implemented in "spencer.core"
+			* The domain core layer implemented in "spencer.domain.core"
+			* The domain structural layer implemented in "spencer.domain.structural"
 			* The port layer implemented in "spencer.port"
 			* The adapter layer implemented in "spencer.adapter"

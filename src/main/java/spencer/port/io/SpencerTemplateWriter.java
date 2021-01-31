@@ -1,6 +1,6 @@
 package spencer.port.io;
 
-import spencer.core.creator.EnumEntityBuilder;
+import spencer.domain.core.creator.EnumEntityBuilder;
 
 public abstract class SpencerTemplateWriter {
 	private StringBuilder output;

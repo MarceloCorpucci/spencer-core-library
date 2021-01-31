@@ -4,7 +4,7 @@ import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.MatcherAssert.assertThat;
 
 import spencer.adapter.io.SpencerConsoleWriter;
-import spencer.core.creator.EnumEntityBuilder;
+import spencer.domain.core.creator.EnumEntityBuilder;
 import spencer.port.io.SpencerTemplateWriter;
 
 public class EntityBuilderGlue {

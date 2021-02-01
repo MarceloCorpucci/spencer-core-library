@@ -51,5 +51,5 @@ public abstract class SpencerTemplateWriter {
 		return output;
 	}
 	
-	public abstract void getOutput(String out);
+	public abstract void getOutput(String[] out);
 }

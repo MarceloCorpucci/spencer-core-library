@@ -11,8 +11,8 @@ public class SpencerConsoleWriter extends SpencerTemplateWriter {
 	}
 
 	@Override
-	public void getOutput(String out) {
-		System.out.println(out);
+	public void getOutput(String[] out) {
+		System.out.println(out[0]);
 	}
 
 }

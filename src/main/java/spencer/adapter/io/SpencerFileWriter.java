@@ -18,11 +18,11 @@ public class SpencerFileWriter extends SpencerTemplateWriter {
 	}
 
 	@Override
-	public void getOutput(String out) {
-		path = Paths.get(System.getProperty("user.dir") + "/src/main/java/spencer/core/io/" + this.builder.getEnumName() + ".java").toAbsolutePath();
+	public void getOutput(String[] out) {
+		path = Paths.get(out[1] + "/" + out[2].replace(".", "/") + "/" + this.builder.getEnumName() + ".java").toAbsolutePath();
 		
 		try {
-			String content = "package spencer.core.io;\n\n" + out + NEW_LINE;
+			String content = "package " + out[2] + ";\n\n" + out[0] + NEW_LINE;
 	    	Files.write(path, content.getBytes(StandardCharsets.UTF_8));
 
        } catch (IOException e) {

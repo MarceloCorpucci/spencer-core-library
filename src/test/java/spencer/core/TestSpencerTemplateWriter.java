@@ -39,10 +39,12 @@ public class TestSpencerTemplateWriter {
 		
 		writer = new SpencerConsoleWriter(builder);
 		
-		StringBuilder out = writer.writeEnum();
-		writer.getOutput(out.toString());
+		StringBuilder anEnum = writer.writeEnum();
+		String[] output = new String[1];
+		output[0] = anEnum.toString();
+		writer.getOutput(output);
 		
-		assertThat(out.toString(), equalTo(expectedOutput));
+		assertThat(anEnum.toString(), equalTo(expectedOutput));
 	}
 	
 	@Test
@@ -78,9 +80,11 @@ public class TestSpencerTemplateWriter {
 		
 		writer = new SpencerConsoleWriter(builder);
 		
-		StringBuilder out = writer.writeEnum();
-		writer.getOutput(out.toString());
+		StringBuilder anEnum = writer.writeEnum();
+		String[] output = new String[1];
+		output[0] = anEnum.toString();
+		writer.getOutput(output);
 		
-		assertThat(out.toString(), equalTo(expectedOutput));
+		assertThat(anEnum.toString(), equalTo(expectedOutput));
 	}
 }
